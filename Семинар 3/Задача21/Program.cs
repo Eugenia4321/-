@@ -20,4 +20,4 @@ int z1 = int.Parse(Console.ReadLine());
 
 double s = Math.Sqrt((x1-x0)*(x1-x0)+(y1-y0)*(y1-y0)+(z1-z0)*(z1-z0));
 
-Console.WriteLine($"A({x0},{y0},{z0}); B({x1},{y1},{z1}) -> {Math.Round(s,2)}");
+Console.WriteLine($"A({x0},{y0},{z0}); B({x1},{y1},{z1}) -> {s:f2}");
