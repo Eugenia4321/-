@@ -21,7 +21,7 @@ void FillArray(int[] array, int minArray, int maxArray)
     Random randGenegator = new Random();
     for (int i = 0; i < array.Length; i++)
         {
-            array[i] = randGenegator.Next(minArray, maxArray);
+            array[i] = randGenegator.Next(minArray, maxArray+1);
         }
 }
 
