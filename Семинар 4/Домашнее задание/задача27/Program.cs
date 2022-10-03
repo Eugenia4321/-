@@ -15,10 +15,11 @@ Console.WriteLine($"Сумма цифр в числе {number} равно {summN
 
 int SummNumbers(int number)
 {
+    number=Math.Abs(number);
     int summa = 0;
-    while (Math.Abs(number)>0)
+    while (number>0)
     {
-        summa=summa+Math.Abs(number%10);
+        summa=summa+number%10;
         number=number/10;
     }
       
