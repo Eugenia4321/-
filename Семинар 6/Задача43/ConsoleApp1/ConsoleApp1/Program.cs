@@ -11,9 +11,13 @@ Console.Write("Введите b2: ");
 double b2 = double.Parse(Console.ReadLine()!);
 Console.Write("Введите k2: ");
 double k2 = double.Parse(Console.ReadLine()!);
+Dot(k1,b1,k2,b2);
 
-double x = (b2 - b1) / (k1 - k2);
-x= Math.Round(x,2);
-double y = k1 * x + b1;
-y= Math.Round(y,2);
-Console.WriteLine($"Точка перечечения двух прямых ({x};{y})") ;
+void Dot(double k1, double b1, double k2, double b2)
+{
+    double x = (b2 - b1) / (k1 - k2);
+    x= Math.Round(x,2);
+    double y = k1 * x + b1;
+    y= Math.Round(y,2);
+    Console.WriteLine($"Точка перечечения двух прямых ({x};{y})") ;
+}

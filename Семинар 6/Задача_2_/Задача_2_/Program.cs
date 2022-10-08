@@ -1,23 +1,16 @@
 ﻿Console.Clear();
 
-int num = 0;
-Console.WriteLine($"sum = {summ(num)}");
+double average = CalcAverageFromConsole();
+Console.WriteLine(average);
 
-double summ(int num, int count=1, double sum =0) 
+
+double CalcAverageFromConsole(double sum = 0, int count = 0)
 {
-    if (num==-1)
-    {
-        Console.WriteLine($" gewg {sum}");
-        return sum ;
-    }
-    else
-    {
-        num = int.Parse(Console.ReadLine())!;
-        Console.WriteLine($"sum {sum} summ(num, count+1) {summ(num, count + 1)}");
-        sum = num + summ(num, count+1);
-        Console.WriteLine(sum);
-        return sum;
+    Console.Write("Введите десятичное число: ");
+    double number = double.Parse(Console.ReadLine()!);
 
-    }
-    
+    if (number == -1)
+        return sum / count;
+    else
+        return CalcAverageFromConsole(sum + number, count + 1);
 }
