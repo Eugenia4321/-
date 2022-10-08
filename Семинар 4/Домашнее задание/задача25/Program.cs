@@ -15,6 +15,8 @@ Console.Write("B = ");
 int b = int.Parse(Console.ReadLine()!);
 bool checkB = CheckB(b);
 int result=Power(a,b);
+Console.Write("A = ");
+int с = int.Parse(Console.ReadLine()!);
 if (checkB)
 {
     Console.WriteLine($"Число {a} в степени {b} равно {result}");
