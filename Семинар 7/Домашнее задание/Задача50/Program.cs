@@ -31,7 +31,7 @@ double[,] CreateDoubleArray(int row, int coloumn)
 
 void SearchingItem(double[,] collection, int row, int coloumn )
 {
-    if ((row > collection.GetLength(0)-1) || (coloumn-1 > collection.GetLength(1)-1))
+    if ((row > collection.GetLength(0)-1) || (coloumn > collection.GetLength(1)-1))
             {
         Console.WriteLine("такого числа в массиве нет");
         }
