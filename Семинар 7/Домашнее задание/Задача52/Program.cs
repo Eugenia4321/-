@@ -13,10 +13,13 @@ int coloumn = int.Parse(Console.ReadLine()!);
 int[,] intArray = CreateIntArray(row, coloumn);
 FillIntArray(intArray);
 PrintArray(intArray);
-ArithmeticMeanOfTheColumn(intArray);
+// ArithmeticMeanOfTheColumn(intArray);
+double[] arithmeticMeanOfTheColumn = ArithmeticMeanOfTheColumn(intArray);
+PrintArrayDouble(arithmeticMeanOfTheColumn);
 
-void ArithmeticMeanOfTheColumn(int[,] arr)
+double[] ArithmeticMeanOfTheColumn(int[,] arr)
 {
+    double[] arithmeticMeanOfTheColumn = new double[arr.GetLength(1)];
     for (int coloumns = 0; coloumns < arr.GetLength(1); coloumns++)
     {
         double sum = 0;
@@ -24,9 +27,10 @@ void ArithmeticMeanOfTheColumn(int[,] arr)
         {
             sum = sum + arr[rows, coloumns];
         }
-        double arithmeticMeanOfTheColumn = sum / arr.GetLength(0);
-        Console.WriteLine($"Среднее арифметическое {coloumns} столбца равно {arithmeticMeanOfTheColumn} ");
+        arithmeticMeanOfTheColumn[coloumns] = sum / arr.GetLength(0);
+        //Console.WriteLine($"Среднее арифметическое {coloumns} столбца равно {arithmeticMeanOfTheColumn} ");
     }
+    return arithmeticMeanOfTheColumn;
 }
 
 int[,] CreateIntArray(int row, int coloumn)
@@ -55,5 +59,14 @@ void PrintArray(int[,] arr)
             Console.Write($"| {arr[rows, coloumns]} |");
         }
         Console.WriteLine();
+    }
+}
+void PrintArrayDouble(double[] arr)
+{
+    for (int rows = 0; rows < arr.GetLength(0); rows++)
+    {
+        
+            Console.Write($"| {arr[rows]} |");
+       
     }
 }
